@@ -76,8 +76,16 @@ nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 " plugins' settings
 "--------------------------------------------------------------------
 " neocomplete
-let g:neocomplcache_enable_at_startup = 1
-
+let g:neocomplete#enable_at_startup = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType syntax setlocal omnifunc=syntaxcomplete#Complete
 " powerline
 let g:Powerline_colorscheme='solarized256'
 
@@ -98,3 +106,4 @@ let NERDTreeWinPos="left"
 let NERDTreeShowHidden=0
 let NERDTreeMinimalUI=1
 let NERDTreeAutoDeleteBuffer=1
+
