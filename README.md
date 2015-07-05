@@ -1,7 +1,7 @@
 # vim-setup
 To quick configing vim and installing plugins
 
-## plugins list
+## plugin list
 - neocomplete
 - nerdtree
 - tagbar
@@ -9,3 +9,4 @@ To quick configing vim and installing plugins
 - vimerl
 - vim-indent-guides
 - vim-powerline
+- auto-pairs
