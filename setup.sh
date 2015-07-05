@@ -3,11 +3,15 @@
 
 VIMDIR=~./.vim
 BUNDLE_DIR=~/.vim/bundle/
+AUTOLOAD_DIR=~/.vim/autoload/
 VIMRC=~/.vimrc
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-wget -O ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+if [ -d $AUTOLOAD_DIR ]; then
+    rm -rf $AUTOLOAD_DIR/*
+else
+    mkdir -p $AUTOLOAD_DIR
+fi
 
 if [ -d $BUNDLE_DIR  ]; then
     rm -rf $BUNDLE_DIR/*
@@ -21,6 +25,9 @@ fi
 
 # copy vimrc file
 cp ./vimrc $VIMRC
+
+# pathogen
+wget -O $AUTOLOAD_DIR https://tpo.pe/pathogen.vim
 
 # neocomplete
 git clone "https://github.com/Shougo/neocomplete.vim.git" $BUNDLE_DIR/neocomplete.vim
