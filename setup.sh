@@ -1,9 +1,13 @@
 # this script set vimrc and clone plugins
 #!/bin/bash
 
-
+VIMDIR=~./.vim
 BUNDLE_DIR=~/.vim/bundle/
 VIMRC=~/.vimrc
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+wget -O ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 
 if [ -d $BUNDLE_DIR  ]; then
     rm -rf $BUNDLE_DIR/*
