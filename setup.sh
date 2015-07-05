@@ -27,7 +27,7 @@ fi
 cp ./vimrc $VIMRC
 
 # pathogen
-wget -O $AUTOLOAD_DIR https://tpo.pe/pathogen.vim
+wget -O $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 
 # neocomplete
 git clone "https://github.com/Shougo/neocomplete.vim.git" $BUNDLE_DIR/neocomplete.vim
