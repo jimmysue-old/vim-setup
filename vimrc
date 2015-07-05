@@ -8,6 +8,7 @@ execute pathogen#infect()
 "--------------------------------------------------------------------
 " vim settings                                                      |
 "--------------------------------------------------------------------
+set backspace=indent,eol,start  " enable delete with backspace in insert mode
 filetype on
 filetype plugin on
 filetype indent on
